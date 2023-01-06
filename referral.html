@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MFB Typeform Referral Link Example</title>
+  </head>
+  <body>
+    <button
+      data-tf-popup="Oj4AEsQl"
+      data-tf-source="localhost"
+      data-tf-on-ready="onTypeformReady"
+      data-tf-on-submit="onTypeformSubmit"
+      data-tf-on-question-changed="onTypeformQuestionChanged"
+      data-tf-on-close="onTypeformClose"
+      data-tf-on-ending-button-click="onTypeformEndingButtonClick"
+    >
+      Signup for an Appointment
+    </button>
+    <script src="https://embed.typeform.com/next/embed.js"></script>
+    <script>
+      function onTypeformSubmit(data) {
+        let redirectTarget = "https://screener.myfriendben.org/?referrer=bia&externalid="+data.responseId
+        window.location.href = redirectTarget;
+      }
+    </script>
+  </body>
+</html>
